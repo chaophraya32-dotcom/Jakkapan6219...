@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    background-color: #94d5dd;
+    color: #f3f5f5;
+    overflow-x: hidden; 
+}
+
+
+   .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;   /* ❌ เอา 25px ออก */
+    padding: 0 1rem;
+}
+
+
+/* Navbar */
+nav {
+    padding: 0.22rem 0;
+    background: rgba(99, 138, 247, 0.8); 
+    backdrop-filter: blur(15px);
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    z-index: 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+}
+.nav-con { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items:center; 
+}
+
+.logo {
+    font-size:1.8rem; 
+    font-weight: 600;
+}
+
+.menu { 
+    display: flex; 
+    list-style: none; 
+}
+
+.menu li { 
+    margin-left: 2.54rem; 
+}
+
+.menu li a { 
+    color: rgba(255, 255, 255, 0.8); 
+    text-decoration: none; 
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #fff;
+}
+
+/* Sections */
+.section-blur {
+    position: relative;
+    padding: 18px 0;
+    min-height: 86vh;
+    display: flex;
+    align-items: center;      /* กลางแนวตั้ง */
+    justify-content: center;  /* ✅ กลางแนวนอน */
+    z-index: 1;
+}
+
+
+.section-blur::before {
+   .section-blur {
+    position: relative;
+    min-height: calc(100vh - 70px); /* ชดเชย navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+}
+
+/* Background Images */
+.section-blur::before {
+    background-image: url('https://panissarasite.wordpress.com/wp-content/uploads/2017/01/slide2.jpg?w=370&h=185');
+}
+
+
+.maincontent-con {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Info Boxes */
+.maincontent-info {
+    flex: 1.2; 
+    padding: 3.5rem;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+.maincontent-info h3 { 
+    font-size: 2.8rem; 
+    margin-bottom: 2.8rem; 
+}
+
+.maincontent-info p { 
+    font-size: 1.2rem; 
+    line-height: 2; /* ระยะบรรทัดอ่านง่าย */
+    color: rgba(255, 255, 255, 0.9); 
+    margin-bottom: 2rem;
+
+}
+
+.maincontent-img {
+    display: flex;
+    justify-content: center;
+}
+
+.maincontent-img img { 
+    width: 90%;
+    max-width: 500px;
+    border-radius: 50px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+
+/* ปุ่มรายละเอียด */
+.content-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #d4af37; /* สีทอง */
+    color: #000000; 
+    font-weight: 600;
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.content-btn:hover { 
+    background: #fff; 
+    transform: translateY(-3px); 
+}
+
+/* Card Section */
+.content-title { 
+    text-align: center; 
+    margin-bottom: 4rem; 
+}
+
+.content-con {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 2.5rem; 
+}
+
+.content-item {
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 20px;
+    width: 350px; /* ขนาดไม่ใหญ่เกินไป */
+    overflow: hidden; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-item img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+}
+
+.card-text { 
+    padding: 2rem; 
+}
+
+.card-text h4 {
+    margin-bottom: 1rem; 
+    font-size: 1.4rem; 
+}
+
+.card-text p { 
+    font-size: 1rem; 
+    line-height: 1.7; 
+    margin-bottom: 1.5rem;
+}
+
+/* === FOOTER แบบ Gay (หน้าหลัก) === */
+.footer {
+    background: #0a0a0a;
+    padding: 5rem 0 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* แบ่ง 3 คอลัมน์ */
+    gap: 3rem;
+}
+
+.footer-logo {
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    color: #fff;
+    text-decoration: none; 
+    display: inline-block; 
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+
+.footer-logo:hover {
+    color: #d4af37; 
+    transform:
+    scale(1.05); 
+}
+
+.footer-col h4 { 
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 140px;
+    height: 2px; 
+    background: #d4af37;
+}
+
+.footer-col ul { 
+    list-style: none; 
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a { 
+    color: rgba(255,255,255,0.6); 
+    text-decoration: none; 
+    transition: 0.3s; 
+}
+
+.footer-col ul li a:hover { 
+    color: #5f5252;
+    padding-left: 8px;
+ }
+
+.social-links {
+    display: flex;
+    gap: 1rem; 
+    margin-top: 1.5rem; 
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px; 
+    background: rgba(255, 255, 255, 0.548);
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%; 
+    text-decoration: none; 
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #d4af37; 
+    transform: translateY(-5px); 
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 4rem; 
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.205); 
+    color: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 992px){
+ .maincontent-con { 
+    flex-direction: column;
+    text-align: center; 
+}
+
+ .footer-grid {
+    grid-template-columns: 1fr; 
+    text-align: center; 
+}
+
+ .footer-col h4::after {
+    left: 50%; transform:
+    translateX(-50%); 
+    }
+
+ .social-links {
+    justify-content:center;
+    }
+}
